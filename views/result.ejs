@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>r(k) n(k)&nbsp;&nbsp; PDF&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  CDF(s(k))&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; s(k)*max(r(k))&nbsp;&nbsp; histogram equalisation level</tr>
+        <% for(var i=0; i < grayLevel.length; i++) { %>
+           <tr>
+             <td><%= grayLevel[i] %> &nbsp; &nbsp;</td>
+             <td><%=frequency[i]%> &nbsp; &nbsp;</td>
+             <td><%=pdf[i]%> &nbsp; &nbsp;</td>
+             <td><%=cdf[i]%> &nbsp; &nbsp;</td>
+             <td><%=cdfMul[i]%> &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+             <td><%=hel[i]%> &nbsp; &nbsp;</td>
+
+           </tr>
+        <% } %>
+    </table>
+    <br>
+    sum of frequency= <%=sum%> <br>
+    <p> 
+        Gray levels = <%=grayLevel%> <br>
+        frequency = <%=frequency%> <br>
+        
+        pdf = <%=pdf%> <br>
+        cdf = <%=cdf%> <br>
+        cdf*highest gray level = <%=cdfMul%> <br>
+        Histogram Equation Level = <%=hel%>
+    </p>
+    
+</body>
+</html>
